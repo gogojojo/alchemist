@@ -1,5 +1,5 @@
 <h1> Search by twitter handle </h1>
-<%= form_tag(results_path, :method => "get") do %>
+<%= form_tag("/", method:"post") do %>
   <%= label_tag(:q, "Search for:") %>
   <%= text_field_tag(:q) %>
   <%= submit_tag("Search") %>
