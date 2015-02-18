@@ -1,0 +1,1 @@
+AlchemyAPI.key = ENV['alchemy_api_key']
