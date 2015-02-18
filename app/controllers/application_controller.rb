@@ -18,7 +18,7 @@ class ApplicationController < ActionController::Base
   @score = @alchemy_results['score']
   @type = @alchemy_results['type']
 
-  redirect_to results_path(:score => @score, :type => @type)
+  redirect_to results_path(:score => @score, :type => @type, :name => search)
 
   end 
 
@@ -27,6 +27,7 @@ class ApplicationController < ActionController::Base
 
   def results
     @score = params[:score]
-    @type = params[:score]
+    @type = params[:type]
+    @name = params[:name]
   end
 end

@@ -15,9 +15,17 @@
  */
 body {
   margin: 0px;
+   background-color: peachpuff;
+   font-family: 'Arvo', serif;
+   text-align: center;
+
+}
+p {
+  text-align: center;
+  color: white;
+  font-size: 45px;
 }
  .index {
-  background-color: dodgerblue;
   margin-top: 0;
   height: 700px;
   width: 100%;
@@ -33,6 +41,8 @@ input {
   width: 50%;
   height: 50px;
   border-radius: 4px;
+  font-size: 30px;
+  padding-left: 30px;
 }
 h2 {
   text-align: center;
@@ -40,6 +50,15 @@ h2 {
 }
 form {
   width: 100%;
-  margin-left: 25%;
-  margin-right: 25%;
+
+}
+.button {
+  text-decoration: none;
+  background-color: white;
+  color: black;
+  padding: 30px 60px;
+  border-radius: 6px;
+  text-align: center;
+
+  margin: 0 auto;
 }

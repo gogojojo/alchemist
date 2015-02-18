@@ -1,2 +1,13 @@
-<%= @score %>
-<%= @type %>
+<% if @type == 'negative' %>
+  <body style='background-color:tomato'>
+<% else %>
+  <body style='background-color:dodgerblue'>
+<% end %>
+<h1> Positivity Score </h1>
+<p> <%= @score %> </p>
+<h1> <%= @name %>'s tweets are:</h1>
+<p> <%= @type %> </p>
+<br>
+<br>
+<br>
+<%= link_to "search again", home_path, :class => 'button' %>
