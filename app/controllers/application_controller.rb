@@ -4,11 +4,25 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   def score
   #action for searching for twitter
-#action for searching on alchemy
-  #redirect to results
+  # twitter_handle = params[:q]
+
+  @tweets = $twitter_rest.user_timeline('@alfthe1')
+  @text = []
+  @tweets.each do |t|
+    @text << t.text
+  end
+  @text = @text.join 
+
+  #action for searching on alchemy
+  @alchemy_results = AlchemyAPI.search(:sentiment_analysis, text: @text)
+  @score = @alchemy_results['score']
+  @type = @alchemy_results['type']
+
   end 
+
   def index
   end
+
   def results
   end
 end
