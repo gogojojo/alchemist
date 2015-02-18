@@ -1,6 +1,10 @@
+<div class='index'>
+
 <h1> Search by twitter handle </h1>
-<%= form_tag("/", method:"post") do %>
-  <%= label_tag(:q, "Search for:") %>
+<%= form_tag("/", method:"post")  do %>
   <%= text_field_tag(:q) %>
-  <%= submit_tag("Search") %>
+  <br>
 <% end %>
+<h2> press enter </h2>
+
+</div>
