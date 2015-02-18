@@ -5,8 +5,8 @@ class ApplicationController < ActionController::Base
   def score
   #action for searching for twitter
   # twitter_handle = params[:q]
-
-  @tweets = $twitter_rest.user_timeline('@alfthe1')
+  search = params[:q]
+  @tweets = $twitter_rest.user_timeline(search)
   @text = []
   @tweets.each do |t|
     @text << t.text
@@ -18,11 +18,15 @@ class ApplicationController < ActionController::Base
   @score = @alchemy_results['score']
   @type = @alchemy_results['type']
 
+  redirect_to results_path(:score => @score, :type => @type)
+
   end 
 
   def index
   end
 
   def results
+    @score = params[:score]
+    @type = params[:score]
   end
 end
